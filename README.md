@@ -8,15 +8,17 @@ This plugin will mark test directories and resolve `testCompile` dependencies. I
 ![alt tag](https://raw.githubusercontent.com/evant/android-studio-unit-test-plugin/master/screenshots/idea.png)
 
 ## Install IDE the plugin
-Download the [zip](https://github.com/evant/android-studio-unit-test-plugin/raw/master/AndroidStudioUnitTestPlugin/AndroidStudioUnitTestPlugin.zip) then go to `Settings -> Plugins -> Install plugin from disk..` to install.
+In Android Studo go to `Settings -> Plugins -> Browse Repositories...` and search for 'Android Studio Unit Test'.
+
+If you feel like living on the edge, can download the [zip](https://github.com/evant/android-studio-unit-test-plugin/raw/master/AndroidStudioUnitTestPlugin/AndroidStudioUnitTestPlugin.zip) then go to `Settings -> Plugins -> Install plugin from disk..` to install.
 
 ## Install the gradle plugin
-Currently you need a forked version of JCAndKSolutions's [android-unit-test](https://github.com/evant/android-unit-test). It depends on a new library which shares an interface between the gradle plugin and the IDE plugin. Therefore, your stps are:
+Currently you need the latest version of JCAndKSolutions's android-unit-test gradle plugin. It's not yet on maven central. Therefore, your steps are:
 
 1. Install the forked version of android-unit-test.
 
   ```bash
-  git clone https://github.com/evant/android-unit-test.git
+  git clone https://github.com/JCAndKSolutions/android-unit-test.git
   cd android-unit-test
   gradle install
   ```
@@ -32,7 +34,7 @@ Currently you need a forked version of JCAndKSolutions's [android-unit-test](htt
         mavenLocal()
       }
 
-      classpath 'com.github.jcandksolutions.gradle:android-unit-test:1.2.1-SNAPSHOT'
+      classpath 'com.github.jcandksolutions.gradle:android-unit-test:1.2.2-SNAPSHOT'
     }
   }
   ```
