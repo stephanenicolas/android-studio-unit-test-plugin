@@ -1,9 +1,9 @@
 android-studio-unit-test-plugin
 ===============================
 
-Android Studio IDE support for Android gradle unit tests. Prepared for Robolectric.
+Android Studio IDE support for Android gradle unit tests.
 
-This plugin will mark test directories and resolve `testCompile` dependencies. It also sets up the correct system properties for Robolectric.
+This plugin will mark test directories and resolve `testCompile` dependencies. It also sets up the correct system properties so that Robolectric will work if you are using it.
 
 ![alt tag](https://raw.githubusercontent.com/evant/android-studio-unit-test-plugin/master/screenshots/idea.png)
 
