@@ -24,10 +24,18 @@ Make sure you have at least version `1.2.2`.
 
 ## Troubleshooting
 
+* Running tests from the IDE gives a `ClassNotFoundException` or something similar.
+
+  If your app includes a library project `compile project(":myLib")` then the JUnit test runner will attempt to run `testClasses` on that project. Since it doesn't have that task it will fail and your test classes will not be generated. To fix, add the needed task to your library project.
+
+```groovy
+task testClasses {}
+```
+
 * The relative path for Robolectric's `@Config(manifest = "path")` is different between gradle and Android Studio.
 
   This is because when creating a run configuration, the path is by default relative to your project root, whereas when running it from gradle it's correctly relative to your apps root. To fix, edit the JUnit run configuration and change `Working Directory` to point to your app root.
 
 * Android Studio is not recognizing the test directories when first opening the project.
 
-  Starting with `0.8.*`, Android Studio does not automatically refresh the project when it's opened. Doing this manually should fix this. 
+  Starting with `0.8.*`, Android Studio does not automatically refresh the project when it's opened. Doing this manually should fix this.
